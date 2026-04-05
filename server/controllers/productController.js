@@ -25,7 +25,7 @@ const getProductById = async (req, res) => {
 
 const createProduct = async (req, res) => {
   try {
-    const { title, description, price, condition, sellerName } = req.body;
+    const { title, description, price, condition, sellerName, imageUrl } = req.body;
 
     if (!title || !description || !price || !condition || !sellerName) {
       return res.status(400).json({ message: 'Please provide all required fields' });
@@ -40,6 +40,7 @@ const createProduct = async (req, res) => {
       price,
       condition,
       sellerName,
+      imageUrl,
       trustScore,
     });
 

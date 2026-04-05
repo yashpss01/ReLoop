@@ -23,6 +23,10 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    imageUrl: {
+      type: String,
+      default: '',
+    },
     trustScore: {
       type: Number,
       default: 5, // Starts at 5 (out of 10 maybe)

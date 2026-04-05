@@ -23,19 +23,20 @@ const Login = () => {
   return (
     <div className="auth-page">
       <div className="auth-container">
-        <h2>Login</h2>
+        <h2>Welcome Back</h2>
+        <p className="subtitle">Securely log in to continue trading.</p>
         <form onSubmit={handleLogin} className="sell-form">
-          <div>
-            <label>Email</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <div className="input-group">
+            <label>Email Address</label>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@college.edu" required />
           </div>
-          <div>
+          <div className="input-group">
             <label>Password</label>
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your password" required />
           </div>
-          <button type="submit" className="btn-primary">Login</button>
+          <button type="submit" className="btn-primary" style={{marginTop: '1rem', padding: '1rem', fontSize: '1.1rem'}}>Login to Dashboard</button>
         </form>
-        <p>Don't have an account? <Link to="/signup" className="btn-link">Sign up</Link></p>
+        <p style={{marginTop: '2rem', textAlign: 'center'}}>Don't have an account? <Link to="/signup" className="btn-link">Sign up</Link></p>
       </div>
     </div>
   );
